@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CO PROJECT</title>
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+	<header>
+		<h1>RISC SIMULATOR</h1>
+	</header>
+
+	<section id="instructions-section">
+		<div class="container">
+
+			<!-- DROPDOWN -->
+			<div class="row">
+				<div class="col-md-9 left-col px-5">
+					<div class="row">
+						<div class="dropdown">
+							<button class="btn dropdown-toggle" type="button" id="instructionSelect" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								Instruction
+							</button>
+							<div class="dropdown-menu" aria-labelledby="instructionSelect">
+								<a class="dropdown-item r-format" href="#">add</a>
+								<a class="dropdown-item i-format" href="#">addi</a>
+								<a class="dropdown-item i-format" href="#">get</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- INSTRUCTION FIELDS -->
+					<div class="row mt-4" id="instruction-add">
+						<ul class="list-unstyled" id="instruction-fields">
+							<li class="src-1">
+								<input type="text" placeholder="src1">
+							</li>
+							<li class="src-2">
+								<input type="text" placeholder="src2">
+							</li>
+							<li class="dst">
+								<input type="text" placeholder="dst">
+							</li>
+						</ul>
+
+						<div class="instruction-actions">
+							<button class="btn" id="btn-i-add">Add</button>
+							<button class="btn btn-white" id="btn-i-clear">Clear</button>
+						</div>
+					</div>
+
+					<div class="row mb-5">
+						<div class="col-8 px-0 table-container" id="table-instructions">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>Instruction</th>
+										<th>Parameters</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>add</td>
+										<td>r1, r2, r3</td>
+									</tr>
+									<tr>
+										<td>gt</td>
+										<td>r1, r2, r3</td>
+									</tr>
+									<tr>
+										<td>sub</td>
+										<td>r1, r2, r3</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-4">
+							<ul class="list-unstyled table-actions mx-5">
+								<li><button class="btn" id="btn-t-remove">Remove</button></li>
+								<li><button class="btn btn-white" id="btn-t-clear">Clear</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 right-col">
+					<div class="row" id="options">
+						<ul class="list-unstyled">
+							<li><button class="btn" id="btn-def">Default</button></li>
+							<li><button class="btn btn-white" id="btn-imp">Import</button></li>
+							<li><button class="btn btn-white" id="btn-exp">Export</button></li>
+							<li><button class="btn btn-white" id="btn-help">Help</button></li>
+						</ul>
+					</div>
+
+					<div class="row" id="next">
+						<ul class="list-unstyled">
+							<li><button class="btn" id="btn-next">Next</button></li>
+							<li><button class="btn btn-white" id="btn-exit">Exit</button></li>
+						</ul>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		window.$ = window.jQuery = require('jquery');
+	</script>
+	<script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/bootstrap.bundle.min.js"></script>
+	<script src="../controllers/instrWin.js"></script>
+</body>
+
+
+
+</html>

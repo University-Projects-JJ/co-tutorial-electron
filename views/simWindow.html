@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CO PROJECT</title>
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+	<header>
+		<h1>RISC SIMULATOR</h1>
+	</header>
+
+	<section id="simulation-section">
+		<div class="container">
+
+			<!-- DROPDOWN -->
+			<div class="row">
+				<!-- LEFT COLUMN -->
+				<div class="col-md-9 left-col px-5">
+
+					<!-- TABLES -->
+					<div class="row mb-5">
+						<div class="col-10 px-0 table-container" id="table-registers">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>Register</th>
+										<th>Binary Value</th>
+										<th>Integer Value</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td id="reg-0">r0</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+									<tr>
+										<td id="reg-1">r1</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+									<tr>
+										<td id="reg-2">r2</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+									<tr>
+										<td id="reg-3">r3</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+									<tr>
+										<td id="reg-4">r4</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+									<tr>
+										<td id="reg-5">r5</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+									<tr>
+										<td id="reg-6">r6</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+									<tr>
+										<td id="reg-7">r7</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+									<tr>
+										<td id="reg-8">r8</td>
+										<td id="reg-bin-value">00000000000000000000000000000000</td>
+										<td id="reg-int-value">0</td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+
+						<div class="col-10 px-0 table-container" id="table-mbr">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>MBR Binary Value</th>
+										<th>Integer Value</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td id="mbr-bin-value">00000000000000000000000000000000</td>
+										<td id="mbr-int-value">0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="col-10 px-0 table-container" id="table-mem">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>Memory Address</th>
+										<th>Memory Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td id="mbr-bin-value">00000000000000000000000000000000</td>
+										<td id="mbr-int-value">0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-md-3 right-col">
+					<div class="row" id="pc">
+						<div class="col px-0 table-container" id="table-pc">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>PC</th>
+										<th>Instruction</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="row" id="next">
+						<ul class="list-unstyled mx-auto">
+							<li><button class="btn" id="btn-sim" disabled>Simulate</button></li>
+							<li><button class="btn btn-white" id="btn-exit">Exit</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<script>
+		window.$ = window.jQuery = require('jquery');
+	</script>
+	<script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/bootstrap.bundle.min.js"></script>
+	<script src="../controllers/simWin.js"></script>
+</body>
+
+
+
+</html>

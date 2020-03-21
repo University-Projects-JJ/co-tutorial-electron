@@ -1,0 +1,247 @@
+:root {
+  --blue: #3881c5;
+  --blue-bright: #cce5fd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: rgb(243, 243, 243);
+}
+
+header {
+  background: var(--blue);
+  height: 100px;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 30px 0 0 0 !important;
+}
+
+#instructions-section,
+#simulation-section {
+  background: #eee;
+  height: 500px;
+  width: 90%;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px rgba(40, 40, 40, 0.199);
+}
+
+#simulation-section {
+  height: 720px;
+}
+
+.btn {
+  background: var(--blue);
+  border: none;
+  box-shadow: 2px 3px 10px rgba(163, 163, 163, 0.342);
+  margin-right: 20px;
+  color: white !important;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  transition: all 0.2s;
+}
+
+#instructionSelect {
+  width: 120px;
+}
+
+.btn-white {
+  color: var(--blue) !important;
+  background: white;
+  border: 2px solid var(--blue);
+}
+
+.dropdown * {
+  font-weight: 700;
+}
+
+.btn:active {
+  transform: translateY(3px);
+  outline: none !important;
+}
+
+.dropdown-item:hover {
+  background: var(--blue-bright);
+}
+
+.dropdown-item:focus {
+  background: var(--blue);
+}
+
+#instruction-fields {
+  display: flex;
+}
+
+#instruction-add {
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+}
+
+#instruction-fields li {
+  margin: 0 30px 40px 0;
+  opacity: 0;
+}
+
+#instruction-fields input {
+  width: 80px;
+  padding: 0 4px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid var(--blue);
+}
+
+input[type="text"] {
+  transition: all 0.2s;
+}
+
+input:focus,
+input:active {
+  box-shadow: none;
+  outline: none;
+  transform: translateY(-3px);
+}
+
+/* table */
+
+.table-container {
+  height: 286px;
+  overflow-y: scroll;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+table {
+  table-layout: fixed;
+}
+
+thead th {
+  padding: 6px !important;
+  width: 100%;
+  background: var(--blue);
+  color: white;
+  position: sticky;
+  top: -0.5px;
+}
+
+tbody {
+  top: 2px;
+  overflow-y: auto;
+  font-size: 16px;
+  line-height: 14px;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr.active {
+  background: var(--blue-bright);
+}
+
+.table-actions li {
+  margin-bottom: 20px;
+}
+
+.right-col {
+  height: 540px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+#options li {
+  margin-bottom: 20px;
+}
+
+#next ul {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+  margin-right: 90px;
+}
+
+/* SIM PAGE */
+
+.table-container {
+  overflow-y: hidden;
+}
+
+#table-registers {
+  height: 390px;
+}
+
+#table-registers th:first-of-type {
+  width: 100px;
+}
+
+#simulation-section table th:last-of-type,
+#simulation-section table td:last-of-type {
+  width: 180px;
+}
+#table-registers table th:nth-of-type(2),
+#table-registers table td:nth-of-type(2) {
+  width: 310px;
+  text-align: center;
+}
+
+#table-mbr,
+#table-mem {
+  height: 78px;
+}
+
+#table-pc {
+  overflow-y: scroll;
+  height: 200px;
+  width: 300px;
+}
+
+#simulation-section .right-col {
+  justify-content: center;
+}
+
+#simulation-section #btn-exit {
+  margin-right: 0;
+}
+
+.highlight {
+  transition: all 0.3s;
+  animation-name: highlight;
+  animation-duration: 0.3s;
+}
+
+@keyframes highlight {
+  0% {
+    background: none;
+  }
+  50% {
+    background: var(--blue-bright);
+  }
+  100% {
+    background: none;
+  }
+}
